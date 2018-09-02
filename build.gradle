@@ -1,0 +1,63 @@
+group 'com.bdd.projectweb'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url "https://mvnrepository.com/repos/consol-labs"
+    }
+    maven {
+        url "http://labs.consol.de/maven/repository/"
+    }
+    maven {
+        url "https://mvnrepository.com/repos/sonatype-releases"
+    }
+    maven {
+        url "https://mvnrepository.com/repos/central"
+    }
+    maven {
+        url "https://plugins.gradle.org/m2/"
+    }
+}
+
+configurations {
+    cucumber
+}
+
+dependencies {
+    cucumber 'info.cukes:cucumber-java:1.2.5'
+}
+
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    testCompile 'junit:junit:4.12'
+    compile 'junit:junit:4.12'
+
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.12.0'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.12.0'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-remote-driver', version: '3.11.0'
+
+    testCompile group: 'io.cucumber', name: 'cucumber-core', version: '2.4.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-java', version: '2.4.0'
+    testCompile group: 'io.cucumber', name: 'cucumber-jvm-deps', version: '1.0.6'
+    testCompile group: 'io.cucumber', name: 'tag-expressions', version: '1.1.1'
+
+    testCompile group: 'info.cukes', name: 'cucumber-html', version: '0.2.6'
+    testCompile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
+    testCompile group: 'info.cukes', name: 'gherkin', version: '2.12.2'
+    compile group: 'info.cukes', name: 'cucumber-java8', version: '1.2.5'
+
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-server', version: '3.12.0'
+
+
+
+}
+
